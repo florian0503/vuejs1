@@ -1,0 +1,85 @@
+/* Palette de couleurs personnalisée */
+:root {
+    --primary-white: #ffffff;
+    --soft-white: #f8f8f8;
+    --muted-white: #f2f2f2;
+
+    --primary-black: #1a1a1a;
+    --soft-black: #242424;
+    --muted-black: #2c2c2c;
+
+    --primary-indigo: #2b3d52;
+
+    --divider-light-1: rgba(60, 60, 60, 0.3);
+    --divider-light-2: rgba(60, 60, 60, 0.15);
+    --divider-dark-1: rgba(84, 84, 84, 0.6);
+    --divider-dark-2: rgba(84, 84, 84, 0.45);
+
+    --text-light: var(--primary-indigo);
+    --text-light-secondary: rgba(60, 60, 60, 0.65);
+    --text-dark: var(--primary-white);
+    --text-dark-secondary: rgba(235, 235, 235, 0.6);
+}
+
+/* Variables sémantiques */
+:root {
+    --background: var(--primary-white);
+    --background-soft: var(--soft-white);
+    --background-muted: var(--muted-white);
+
+    --border-color: var(--divider-light-2);
+    --border-hover: var(--divider-light-1);
+
+    --heading-color: var(--text-light);
+    --text-color: var(--text-light);
+
+    --section-spacing: 160px;
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --background: var(--primary-black);
+        --background-soft: var(--soft-black);
+        --background-muted: var(--muted-black);
+
+        --border-color: var(--divider-dark-2);
+        --border-hover: var(--divider-dark-1);
+
+        --heading-color: var(--text-dark);
+        --text-color: var(--text-dark-secondary);
+    }
+}
+
+/* Styles globaux */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    font-weight: normal;
+}
+
+body {
+    min-height: 100vh;
+    color: var(--text-color);
+    background: var(--background);
+    transition: color 0.4s, background-color 0.4s;
+    line-height: 1.6;
+    font-family:
+        'Inter',
+        -apple-system,
+        BlinkMacSystemFont,
+        'Segoe UI',
+        Roboto,
+        Oxygen,
+        Ubuntu,
+        Cantarell,
+        'Fira Sans',
+        'Droid Sans',
+        'Helvetica Neue',
+        sans-serif;
+    font-size: 16px;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
